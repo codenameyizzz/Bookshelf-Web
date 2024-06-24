@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Submission-02 | Bookshelf</title>
+
+    <!--Icon-->
+    <link href='https://unpkg.com/boxicons@2.1.2/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.8/css/line.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+    <div class="wrapper">
+        <header class="judul">
+            <h1>Bookshelf Apps</h1>
+            <p class="mur">(Aplikasi Pengelola Sumber Bacaan)</p>
+        </header>
+
+        <div class="top">
+            <div class="search-container">
+                <h2 class="title">Cari Buku</h2>
+                <form id="formSearch" action="" method="post">
+                    <div class="label-form">
+                        <input type="text" name="pencarian" id="pencarian" placeholder="">
+                        <label for="pencarian">Cari Buku</label>
+                    </div>
+                    <div class="form-search-bottom">
+                        <button type="reset" class="reset-btn"><i class="uil uil-history"></i></button>
+                        <button type="submit" class="search-btn"><i class="uil uil-search-alt"></i></button>
+                    </div>
+                </form>
+            </div>
+        </div>
+        <div>
+            <div class="form-container">
+                <h2 class="title">Tambah Buku</h2>
+                <form id="formDataBuku" action="" method="post">
+                    <div class="label-form">
+                        <input type="text" name="judul" id="judul" placeholder="">
+                        <label for="judul">Judul</label>
+                    </div>
+                    <div class="row">
+                        <div class="label-form">
+                            <input type="text" name="penulis" id="penulis" placeholder="">
+                            <label for="penulis">Penulis</label>
+                        </div>
+                        <div class="label-form">
+                            <input type="number" name="tahun" id="tahun" placeholder="">
+                            <label for="tahun">Tahun</label>
+                        </div>
+                    </div>
+                    <div class="check-label">
+                        <input type="checkbox" name="isRead" id="isRead" placeholder="">
+                        <label for="isRead">Sudah selesai dibaca</label>
+                    </div>
+                    <button type="submit" class="submit-btn">Add Book<i class="uil uil-plus"></i></button>
+                </form>
+            </div>
+        </div>
+
+        <div class="bottom">
+            <div class="left-container">
+                <h2 class="title">Buku Belum Dibaca</h2>
+                <p class="rum">(Checklist untuk Buku Sudah Dibaca!)</p>
+                <div id="belumDibaca">  
+                </div>
+            </div>
+            <div class="right-container">
+                <h2 class="title">Buku Sudah Dibaca</h2>
+                <p class="rum">(Undo untuk mengembalikan buku ke Belum Dibaca!)</p>
+                <div id="sudahDibaca">
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="js/script.js"></script>
+</body>
+
+</html>

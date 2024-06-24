@@ -1,0 +1,293 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&family=Playwrite+NZ:wght@100..400&display=swap');
+
+
+:root {
+  --general: hsl(217, 91%, 60%);
+  --basic-grey: hsl(215, 20%, 65%);
+  --box-title: rgb(51, 65, 85);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Nunito", sans-serif;
+  background-color: var(--bg-body);
+  font-size: 1rem;
+  font-weight: 500;
+  color: var(--box-title);
+}
+
+.judul {
+  background-color: #609966;
+}
+
+h1 {
+  color: #fff;
+}
+
+.wrapper {
+  width: min(100% - 2rem, 800px);
+  margin-inline: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.top,
+.bottom {
+  display: flex;
+  gap: 1rem;
+  align-items: flex-start;
+}
+
+.form-container,
+.search-container,
+.left-container,
+.right-container {
+  padding: 1rem;
+  background: #fff;
+  border-radius: 1rem;
+  width: 100%;
+  box-shadow: 0 4px 8px rgba(15, 23, 42, 0.1);
+}
+
+.rum {
+  margin-bottom: 1rem;
+  color: grey;
+  font-size: 15px;
+}
+
+.form-container {
+  width: 100%;
+}
+
+.search-container {
+  width: 100%;
+  align-items: center;
+}
+
+header {
+  width: 100%;
+  padding: 1rem;
+  text-align: center;
+}
+
+.title {
+  margin-bottom: 0.3rem;
+  font-weight: 600;
+  font-size: 1.25rem;
+}
+
+.label-form {
+  display: flex;
+  flex: 1;
+  align-items: center;
+  position: relative;
+  margin-bottom: 0.75rem;
+}
+
+.label-form input {
+  border: 1px solid var(--basic-grey);
+  padding: 0.5rem 1rem;
+  border-radius: 0.5rem;
+  width: 100%;
+  font-size: 1rem;
+  outline: none;
+}
+
+.label-form label {
+  flex-basis: 50%;
+  position: absolute;
+  left: 1rem;
+  top: 50%;
+  transform: translateY(-50%);
+  color: var(--basic-grey);
+  transition: 0.3s;
+  cursor: text;
+}
+
+.label-form input:not(:placeholder-shown),
+.label-form input:focus {
+  border: 2px solid var(--general);
+}
+
+.label-form input:not(:placeholder-shown)~label,
+.label-form input:focus~label {
+  top: 0;
+  left: 0.75rem;
+  color: var(--general);
+  padding: 0 0.25rem;
+  background-color: #fff;
+  font-size: 12px;
+}
+
+.form-search-bottom {
+  display: flex;
+  justify-content: end;
+  gap: 0.25rem;
+}
+
+.submit-btn {
+  border: none;
+  outline: none;
+  background-color: #22c55e;
+  font-size: 13px;
+  color: #fff;
+  display: flex;
+  margin-left: auto;
+  padding: 0.5rem 1rem;
+  border-radius: 0.5rem;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.submit-btn:hover,
+.search-btn:hover {
+  background-color: hsl(217, 91%, 50%);
+}
+
+.check-label {
+  display: flex;
+  align-items: center;
+  gap: 0.25rem;
+}
+
+.check-label label {
+  color: var(--general);
+}
+
+.check-label input,
+.check-label label {
+  cursor: pointer;
+}
+
+.item {
+  border: 1px solid var(--basic-grey);
+  border-radius: 0.5rem;
+  padding: 0.5rem 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 0.5rem;
+}
+
+.item-title {
+  color: var(--general);
+}
+
+.item-title span {
+  color: var(--box-title);
+}
+
+.item-writer {
+  font-weight: 400;
+  font-size: 14px;
+}
+
+.item-action {
+  display: flex;
+  gap: 0.25rem;
+}
+
+.del-btn,
+.check-btn,
+.undo-btn,
+.reset-btn,
+.search-btn {
+  padding: 0.25rem 0.5rem;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  transition: 0.3s;
+  color: #fff;
+  font-size: 25px;
+  border-radius: 0.25rem;
+}
+
+.search-btn {
+  background-color: #22c55e;
+}
+
+.reset-btn {
+  background-color: var(--basic-grey);
+}
+
+.reset-btn:hover {
+  background-color: hsl(215, 20%, 55%);
+}
+
+.del-btn {
+  background-color: #ef4444;
+}
+
+.del-btn:hover {
+  background-color: hsl(0, 84%, 50%);
+}
+
+.check-btn {
+  background-color: #22c55e;
+}
+
+.check-btn:hover {
+  background-color: hsl(142, 71%, 40%);
+}
+
+.undo-btn {
+  background-color: #facc15;
+}
+
+.undo-btn:hover {
+  background-color: hsl(48, 96%, 47%);
+}
+
+.alert {
+  position: fixed;
+  top: 15%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  padding: 1rem;
+  background-color: #22c55e;
+  color: white;
+  border-radius: 0.5rem;
+  z-index: 100;
+  transition: opacity 0.5s;
+}
+
+.mur {
+  color: white;
+}
+
+.hidden {
+  display: none;
+}
+
+.row {
+  display: flex;
+  gap: 0.75rem;
+}
+
+@media screen and (max-width: 572px) {
+
+  .top,
+  .bottom {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .form-container {
+    width: 100%;
+  }
+
+  .search-container {
+    width: 100%;
+  }
+
+  .row {
+    flex-direction: column;
+    gap: 0;
+  }
+}
